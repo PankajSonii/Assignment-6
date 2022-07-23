@@ -1,0 +1,1858 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\colortbl ;\red0\green77\blue187;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\cf1\ul\b\f0\fs28\lang9 Assignment-Javascript - Day -6\par
+
+\pard\sa200\sl276\slmult1\ulnone\par
+1. Ans- \par
+\par
+<!DOCTYPE html>\par
+\par
+<html>\par
+\par
+<body>\par
+\par
+<script>\par
+\par
+alert( "I\rquote m JavaScript!");\par
+\par
+</script>\par
+\par
+<h1>What\rquote s the error in this ?</h1>\par
+\par
+</body>\par
+\par
+</html>\par
+\par
+2. Ans:\par
+\par
+fix.html\par
+\par
+<!DOCTYPE html>\par
+\par
+<html>\par
+\par
+<head>\par
+\par
+<script src=script.js></script>\par
+\par
+</head>\par
+\par
+<body>\par
+\par
+</body>\par
+\par
+</html>\par
+\par
+scripts.js\par
+\par
+alert("I\rquote m invoked!");\par
+\par
+3. Ans:\par
+\par
+fix.html\par
+\par
+<!DOCTYPE html>\par
+\par
+<html>\par
+\par
+<head>\par
+\par
+<script src=script.js></script>\par
+\par
+</head>\par
+\par
+<body>\par
+\par
+</body>\par
+\par
+</html>\par
+\par
+Script.js\par
+\par
+alert("I'm JavaScript!");\par
+alert('Hello') // this line is not having semicolon\par
+alert(`Wor ld`)\par
+alert(3\par
++1+\par
+2); // this is multiple line code but in js there is no indentation required. \par
+\par
+4. Ans:  \par
+\par
+fix.html\par
+\par
+<!DOCTYPE html>\par
+\par
+<html>\par
+\par
+<head>\par
+\par
+<script src=script.js></script>\par
+\par
+</head>\par
+\par
+<body>\par
+\par
+</body>\par
+\par
+</html>\par
+\par
+Script.js\par
+\par
+//let admin=9, fname=10.5;\par
+fname = "Guvi";\par
+lname = "geek"\par
+admin = fname +" "+ lname;\par
+alert( admin ); // "Guvi geek"\par
+\par
+5. Ans :\par
+\par
+fix.html\par
+\par
+fix.html\par
+\par
+<!DOCTYPE html>\par
+\par
+<html>\par
+\par
+<head>\par
+\par
+<script src=script.js></script>\par
+\par
+</head>\par
+\par
+<body>\par
+\par
+</body>\par
+\par
+</html>\par
+\par
+script.js\par
+\par
+//let fname=10.5;\par
+fname = "Guvi";\par
+lname = "geek"\par
+let name = fname+ " "+ lname;\par
+alert( `hello  $\{name\}`);\par
+\par
+6. Ans:\par
+\par
+fix.html\par
+\par
+<!DOCTYPE html>\par
+\par
+<html>\par
+\par
+<head>\par
+\par
+<script src=script.js></script>\par
+\par
+</head>\par
+\par
+<body>\par
+\par
+</body>\par
+\par
+</html>\par
+\par
+script.js\par
+\par
+let a = parseInt (prompt("First number?"));\par
+\par
+let b = parseInt(prompt("Second number?"));\par
+\par
+let c=a + b ;\par
+\par
+alert(c);\par
+\par
+7. Que:  \par
+\par
+**If you run the below scritpt you will get \ldblquote **Code is Blasted**\rdblquote **\par
+\par
+**Explain Why the Code is blasted and how to diffuse it and get \ldblquote **Diffused**\rdblquote .**\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+var a = "2" > "12";//Don't touch below this\par
+if (a) \{\par
+  console.log("Code is Blasted")\par
+\}\par
+else\par
+\{\par
+  console.log("Diffused")\par
+\}\par
+```\par
+\par
+Ans: When comparing a string with a number, JavaScript will\~**convert the string to a number when doing the comparison**. An empty string converts to 0. A non-numeric string converts to NaN which is always false. When comparing two strings, "2" will be greater than "12", because (alphabetically) 1 is less than 2.\par
+\par
+Moreover: It is checking with the first number only like \ldblquote 2\rdblquote  will check with only \ldblquote 1\rdblquote  whether you have passed \ldblquote 12\rdblquote . It will split \ldblquote 12\rdblquote  and compare with the only first number.\par
+\par
+And if you want to get \ldblquote diffused\rdblquote  then just need to exchange with a greater sign to a lesser sign.\par
+\par
+ it is checking alphabetically, and not numerically. 2 as a string is greater than anything string beginning with 1. So that is why.\par
+\par
+8 Que:\par
+\par
+ \par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+let a = prompt("Enter a number?");//Don't modify any code below thisif (a) \{\par
+ console.log( 'OMG it works for any number inc 0' );\par
+\}\par
+else\par
+\{\par
+ console.log( "Success" );\par
+\}\par
+```\par
+\par
+Ans: \par
+\par
+I have reassigned the value to a=false\par
+\par
+let a = (prompt("Enter a string?")) ;\par
+\par
+a=false \par
+\par
+//Don't modify any code below this\par
+\par
+if (a) \{\par
+\par
+console.log( 'OMG it works for any number inc 0' );\par
+\par
+\}\par
+\par
+else\par
+\par
+\{\par
+\par
+console.log( "Success" );\par
+\par
+\}\par
+\par
+output:  Success\par
+\par
+9 Ques. \par
+\par
+Q let value = prompt('How many runs you scored in this ball');\par
+\par
+if (value === 4) \{\par
+\par
+console.log("You hit a Four");\par
+\par
+\} else if (value === 6) \{\par
+\par
+console.log("You hit a Six");\par
+\par
+\} else \{\par
+\par
+console.log("I couldn't figure out");\par
+\par
+\}\par
+\par
+A: \par
+\par
+In this answer, we have to make a integer to prompt result then we can execute \par
+\par
+let value = (prompt('How many runs you scored in this ball'));\par
+let value1=parseInt(value)\par
+if (value1 === 4) \{\par
+console.log("You hit a Four");\par
+\} else if (value1 === 6) \{\par
+console.log("You hit a Six");\par
+\} else \{\par
+console.log("I couldn't figure out");\par
+\}\par
+\par
+10 Ques: \par
+\par
+**Fix the code to welcome the Employee**\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+let login = 'Employee';\par
+let message = (login == 'Employee') ? :\par
+  (login == 'Director') ? 'Greetings' :\par
+  (login == '') ? 'No login' :\par
+  '';console.log(message);\par
+```\par
+\par
+Ans: \par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+        let login = 'Employee';\par
+let message = (login == 'Employee') ? 'Greetings' :'No login';\par
+\par
+console.log(message)\par
+</script>\par
+</html>\par
+\par
+Output: Greetings\par
+```\par
+\par
+11 QUES:\par
+\par
+**Fix the code to welcome the boss**\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+// You cant change the value of the msg\par
+let message;if (null || 2 || undefined )\par
+\{\par
+ let message = "welcome boss";\par
+\}\par
+else\par
+\{\par
+ let message = "Go away";\par
+\}\par
+  console.log(message);\par
+```\par
+\par
+Ans:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+        // You cant change the value of the msg\par
+\par
+        let message;\par
+if (null || 2 || undefined )\par
+\{\par
+  message = "welcome boss";\par
+\}\par
+else\par
+\{\par
+  message = "Go away";\par
+\}\par
+  console.log(message);\par
+</script>\par
+</html>\par
+\par
+Output: welcome boss\par
+\par
+```\par
+\par
+Ques 12\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+let message;\par
+let lock = 2;//Dont change any code below this if (null || lock || undefined )\par
+\{\par
+  message = "Go away";\par
+\}\par
+else\par
+\{\par
+ message = "welcome";\par
+\}\par
+  console.log(message);\par
+```\par
+\par
+Ans:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+        // You cant change the value of the msg\par
+\par
+        let message;\par
+if (null || 2 || undefined )\par
+\{\par
+  message = "welcome boss";\par
+\}\par
+else\par
+\{\par
+  message = "Go away";\par
+\}\par
+  console.log(message);\par
+</script>\par
+</html>\par
+\par
+output welcome boss\par
+```\par
+\par
+13.Ques\par
+\par
+```html\par
+Fix the code to welcome the boss\par
+\par
+fix.html\par
+\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+script.js\par
+\par
+let message;\par
+let lock = 2;\par
+//Dont change any code below this\par
+if (lock && " " || undefined )\par
+\{\par
+  message = "Go away";\par
+\}\par
+else\par
+\{\par
+ message = "welcome";\par
+\}\par
+console.log(message);\par
+```\par
+\par
+Ans:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+        // You cant change the value of the msg\par
+\par
+        let message;\par
+let lock = null;\par
+//Don't change any code below this\par
+if (lock && " " || undefined )\par
+\{\par
+  message = "Go away";\par
+\}\par
+else\par
+\{\par
+ message = "welcome";\par
+\}\par
+console.log(message);\par
+  \par
+</script>\par
+</html>\par
+\par
+Output: welcome\par
+```\par
+\par
+Ques: 14\par
+\par
+**Change the code to print**\par
+\par
+3\par
+\par
+2\par
+\par
+1\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+//You can change only 2 characterslet i = 3;while (i) \{\par
+  console.log( --i );\par
+\}\par
+```\par
+\par
+Ans:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+        //You can change only 2 characters\par
+        let i = 3;\par
+        while (i>0) \{\par
+  console.log( i--);\par
+\}\par
+  \par
+</script>\par
+</html>\par
+```\par
+\par
+Ques: 15\par
+\par
+**Change the code to print 1 to 10 in 4 lines**\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+let num = 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+num += 1\par
+console.log(num)\par
+```\par
+\par
+\f1\emdash  \emdash  \emdash  \emdash  \emdash  \emdash  \emdash  \emdash  \emdash  \emdash  \emdash  \emdash\par
+\par
+Ans:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+    var space="";\par
+    var count, N=10\par
+    var space1="";\par
+    var count1\par
+    var space2="";\par
+    var count2\par
+    var space3="";\par
+    var count3\par
+\par
+    for (var i = 1; i<N; i++) \{\par
+        if(i===3)\{\par
+        for(var n=1; n<=i; n++) \{\par
+            \par
+            count = n\par
+            space += count + " ";\par
+        \} console.log(space)\par
+    \}\par
+\}\par
+\par
+for (var l = 4; l<N; l++) \{\par
+    \par
+    if(l===6)\{\par
+        for(var n1=4; n1<=l; n1++) \{\par
+    \par
+            count1 = n1\par
+            space1 += count1 + " ";\par
+        \} console.log(space1)\par
+    \}\par
+\}\par
+\par
+for (var l = 7; l<N; l++) \{\par
+    \par
+    if(l===8)\{\par
+        for(var n1=7; n1<=l; n1++) \{\par
+    \par
+            count2 = n1\par
+            space2 += count2 + " ";\par
+        \} console.log(space2)\par
+    \}\par
+\}\par
+\par
+for (var l = 9; l<=N; l++) \{\par
+    \par
+    if(l===10)\{\par
+        for(var n1=9; n1<=l; n1++) \{\par
+    \par
+            count3 = n1\par
+            space3 += count3 + " ";\par
+        \} console.log(space3)\par
+    \}\par
+\}\par
+\par
+ \par
+\par
+</script>\par
+</html>\par
+\par
+Output:\par
+\par
+1 2 3 \par
+4 5 6 \par
+7 8 \par
+9 10\par
+```\par
+\par
+Ques=16\par
+\par
+**Change the code to print even numbers**\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+//You are allowed to modify only one character for (let num = 2; num <= 20; num += 1) \{\par
+  console.log(num)\par
+\}\par
+```\par
+\par
+\emdash  \emdash  \emdash  \emdash\par
+\par
+Answer:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+\par
+ //You are allowed to modify only one character for\par
+ for (let num = 2; num <= 20; num += 2) \{\par
+    console.log(num)\par
+\}\par
+ //just increment by 2\par
+\par
+</script>\par
+</html>\par
+\par
+output:\par
+\par
+2\par
+4\par
+6\par
+8\par
+10\par
+12\par
+14\par
+16\par
+18\par
+20\par
+```\par
+\par
+Ques 17:\par
+\par
+**Change the code to print all the gifts**\par
+\par
+fix.html\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+let gifts = ["teddy bear", "drone", "doll"];for (let i = 0; i < 3; i++) \{\par
+  console.log('Wrapped $\{'gifts[i]'\} and added a bow!');\par
+\}\par
+```\par
+\par
+Answer:\par
+\par
+let gifts = ["teddy bear", "drone", "doll"];\par
+for (let i = 0; i < 3; i++) \{\par
+console.log(`Wrapped $\{gifts[i]\} and added a bow!`);\par
+\}\par
+\par
+output:  just need to make a correction in json data with the help of (` `)\par
+\par
+```\par
+Wrapped teddy bear and added a bow!\par
+Wrapped drone and added a bow!\par
+Wrapped doll and added a bow!\par
+```\par
+\par
+Ques: 18\par
+\par
+```\par
+<!DOCTYPE html>\par
+<html>\par
+<body>\par
+ <script src=\rdblquote script.js\rdblquote ></script>\par
+</body>\par
+</html>\par
+```\par
+\par
+script.js\par
+\par
+```\par
+let countdown = 100;while (countdown > 0) \{\par
+  countdown--;\par
+  if(countdown == 0)\par
+  \{\par
+   console.log("bomb triggered");\par
+  \}\par
+\}\par
+```\par
+\par
+Ans:\par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+\par
+ let countdown = 100;\par
+ while (countdown > 1) \{\par
+  countdown--;\par
+  if(countdown == 0)\par
+  \{\par
+   console.log("bomb triggered");\par
+  \}\par
+\}\par
+\par
+</script>\par
+</html>\par
+```\par
+\par
+Ques 19\par
+\par
+Whats the msg printed and why?\par
+\par
+```\par
+var lemein = \ldblquote 0\rdblquote ;\par
+var lemeout = 0;\par
+var msg = \ldblquote\rdblquote ;if (lemein) \{\par
+ msg += \ldblquote hi\rdblquote ;\par
+ \}if (lemeout) \{\par
+ msg += \lquote Hello\rquote ;\par
+\}console.log(msg);\par
+```\par
+\par
+Ans: \par
+\par
+```html\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+\par
+</body>\par
+\par
+<script>\par
+\par
+// Whats the msg printed and why?\par
+\par
+var lemein = "0";\par
+var lemeout = 0;\par
+// console.log(typeof(lemeout) )\par
+var msg = "";\par
+if (lemein) \{\par
+ msg += "hi";\par
+ \}\par
+if (lemeout) \{\par
+ msg += "Hello";\par
+\}\par
+console.log(msg); \par
+\par
+output hi\par
+Reason: lemeout is false and it has no value. \par
+\par
+</script>\par
+</html>\par
+```\par
+\par
+Ques 20:\par
+\par
+Write a code to print the numbers in the array\par
+\par
+**Output**: 1234567891011\par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var new_string = " ";\par
+\par
+for (var i = 0; i < 11; i++) \{\par
+new_string += numsArr[i]\par
+\}\par
+console.log(new_string);\par
+\par
+Ans:\par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var new_string = " ";\par
+\par
+for (var i = 0; i < numsArr.length; i++) \{\par
+new_string += numsArr[i]\par
+\}\par
+console.log(new_string);\par
+\par
+output: 1234567891011\par
+\par
+Ques: 21\par
+\par
+Write a code to print the numbers in the array\par
+\par
+**Output**: 1,2,3,4,5,6,7,8,9,10,11\par
+\par
+```\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];var new_string = \ldblquote\rdblquote ;\par
+\par
+for (var i = 1; i < 11; i++) \{\par
+ new_string += numsArr[i] + ,\par
+\}console.log(new_string);\par
+```\par
+\par
+Ans:\par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var new_string = " ";\par
+\par
+for (var i = 0; i < numsArr.length-1; i++) \{\par
+new_string += numsArr[i]+","\par
+\par
+\}\par
+new_string+=numsArr.length\par
+\par
+console.log(new_string)\par
+\par
+Out:  `1,2,3,4,5,6,7,8,9,10,11`\par
+\par
+Ques 21\par
+\par
+Write a code to print from last to first with spaces (Make sure there is no space after the last element 1)\par
+\par
+**Output**: 11 10 9 8 7 6 5 4 3 2 1\par
+\par
+```\par
+var new_string = \ldblquote\rdblquote ;\par
+\par
+for (var i = 11; i > 0; i \emdash  ) \{\par
+ new_string += numsArr[i] + \ldblquote  \ldblquote\par
+\}\par
+console.log(new_string);\par
+```\par
+\par
+Ans:\par
+\par
+// Write a code to print from last to first with spaces (Make sure there is no space after the last element 1)\par
+\par
+// Output: 11 10 9 8 7 6 5 4 3 2 1\par
+\par
+var new_string = " ";\par
+\par
+for (var i = 11; i > 0; i--) \{\par
+new_string += i + " ";\par
+\}\par
+\par
+var result=new_string.trim();\par
+console.log(result);\par
+\par
+Output: `11 10 9 8 7 6 5 4 3 2 1`\par
+\par
+Write a code to replace the array value \emdash  If the number is even, replace it with \lquote even\rquote .\par
+\par
+**Output**:[ 1, \ldblquote even\rdblquote , 3, \ldblquote even\rdblquote , 5, \ldblquote even\rdblquote , 7, \ldblquote even\rdblquote , 9, \ldblquote even\rdblquote , \'85 ]\par
+\par
+```\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];for (var i = 0; i <=10; i++) \{\par
+ if(numsArr[i] %2 == 0 )\par
+ \{\par
+ numsArr[i] = odd\par
+ \}\par
+\}\par
+console.log(numsArr);\par
+```\par
+\par
+Ans:\par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+for (var i = 0; i <numsArr.length; i++) \{\par
+if(numsArr[i] %2 == 0 )\par
+\{\par
+numsArr[i] = 'even'\par
+\}\par
+\}\par
+console.log(numsArr);\par
+\par
+Output: \par
+\par
+```\par
+[ 1, 'even', 3, 'even', 5, 'even', 7, 'even', 9, 'even', 11]\par
+```\par
+\par
+Ques 22\par
+\par
+Write a code to add all the numbers in the array\par
+\par
+Output: 66\par
+\par
+```\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];for (var i = 0; i <=10; i++) \{\par
+ var sum;\par
+ sum += numsArr[i]\par
+\}\par
+console.log(sum);\par
+\par
+```\par
+\par
+Ans: \par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var sum=0;\par
+for (var i = 0; i <numsArr.length; i++) \{\par
+\par
+sum += numsArr[i]\par
+\}\par
+console.log(sum);\par
+\par
+Output: 66\par
+\par
+Ques: 23\par
+\par
+Write a code to add the even numbers only **Output**: 30\par
+\par
+```\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var sum=0;\par
+for (var i = 0; i <10; i++) \{\par
+ if(numsArr[i]%2==0);\par
+ sum += numsArr[i]\par
+\}\par
+console.log(sum);\par
+```\par
+\par
+Ans: \par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var sum=0;\par
+for (var i = 1; i <numsArr.length; i++) \{\par
+// console.log(numsArr[i]);\par
+\par
+if(numsArr[i]%2==0)\{\par
+// console.log(numsArr[i])\par
+\par
+sum += numsArr[i]\par
+// console.log(sum);\par
+\}\par
+\}\par
+\par
+console.log(sum);\par
+\par
+Output 30\par
+\par
+Ques: 23\par
+\par
+Write a code to add the even numbers and subract the odd numbers **Output**: 94\par
+\par
+```\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var sum=100;for (var i = 0; i <=10; i++) \{\par
+ if(numsArr[i]%2!=0);\par
+ \{\par
+ sum += numsArr[i]\par
+ \}\par
+ else\par
+ \{\par
+ sum -= numsArr[i]\par
+ \}\par
+\}\par
+console.log(sum);\par
+```\par
+\par
+Ans:\par
+\par
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\par
+var sum=100;\par
+for(var i=0; i<numsArr.length; i++)\{\par
+if(numsArr[i]%2!==0)\{\par
+sum-=numsArr[i]\par
+\}else\{\par
+sum+=numsArr[i]\par
+\}\par
+\}console.log(sum)\par
+\par
+output: 94\par
+\par
+Ques 24\rdblquote\par
+\par
+Write a code to print inner arrays**Output**:\par
+\par
+Array(5) [ 1, 2, 3, 4, 5 ]Array(6) [ 6, 7, 8, 9, 10, 11 ]\par
+\par
+```\par
+var numsArr = [[1, 2, 3, 4, 5][ 6, 7, 8, 9, 10, 11]];\par
+for (var i = 0; i < numsArr.length; i++); \{\par
+ console.log( numsArr[i])\par
+\}\par
+```\par
+\par
+Ans:\par
+\par
+var arr1=[];\par
+var arr2=[]\par
+\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+arr1=numsArr[0];\par
+arr2=numsArr[1];\par
+console.log(arr1)\par
+console.log(arr2)\par
+\par
+out: \par
+\par
+```\par
+[ 1, 2, 3, 4, 5 ]\par
+[ 6, 7, 8, 9, 10, 11 ]\par
+```\par
+\par
+Ques: 25\par
+\par
+Write a code to print elements in the inner arrays **Output**: 1234567891011\par
+\par
+```\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+var str_all=0;for (var i = 0; i < numsArr.length; i++) \{\par
+ var inner_array = numsArr[i];\par
+ for(var j = 0 ; j < inner_array.length;i++ )\par
+     str_all +=inner_array[j]\par
+\}\par
+console.log(str_all);\par
+```\par
+\par
+Ans:\par
+\par
+// Write a code to print elements in the inner arrays\par
+// Output: 1234567891011\par
+var str_all=[];\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11,]];\par
+\par
+for (var i = 0; i < numsArr.length; i++) \{\par
+var inner_array = numsArr[i];\par
+for(var j = 0 ; j < inner_array.length;j++ )\{\par
+str_all.push(inner_array[j])\par
+\}\par
+\}\par
+var a=str_all.toString()\par
+const withoutCommas = a.replace(/,/g, '');\par
+\par
+console.log(withoutCommas)\par
+\par
+out: 1234567891011\par
+\par
+Ques 26\par
+\par
+Write a code to replace the array value \emdash  If the index is even, replace it with \lquote even\rquote .\par
+\par
+**Output**: [ [\ldblquote even\rdblquote , 2, \ldblquote even\rdblquote , 4, \ldblquote even\rdblquote ], [6, \ldblquote even\rdblquote , 8, \ldblquote even\rdblquote , 10, \'85] ]\par
+\par
+```\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+var str_all=0;for (var i = 0; i < numsArr.length; i++) \{\par
+ var inner_array = numsArr[i];\par
+ for(var j = 0 ; j < inner_array.length;i++ )\par
+      if(numsArr[i] %2 == 0 )\par
+      \{\par
+         numsArr[i] = even\par
+       \}\par
+\}\par
+console.log(numsArr);\par
+```\par
+\par
+Ans:\par
+\par
+Write a code to replace the array value \emdash  If the index is even, replace it with \lquote even\rquote .\par
+\par
+**Output**: [ [\ldblquote even\rdblquote , 2, \ldblquote even\rdblquote , 4, \ldblquote even\rdblquote ], [6, \ldblquote even\rdblquote , 8, \ldblquote even\rdblquote , 10, \'85] ]\par
+\par
+```\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+// var str_all=0;\par
+\par
+var num1= numsArr[0]\par
+var num2=numsArr[1]\par
+\par
+for (var i = 0; i < num1.length; i++) \{\par
+   if(num1[i] %2 == 0 )\par
+      \{\par
+         num1[i]='even'\par
+       \}\par
+\}       \par
+\par
+ \par
+ for (var i = 0; i < num2.length; i++) \{\par
+   if(num2[i] %2 == 0 )\par
+      \{\par
+         num2[i]='even'\par
+       \}\par
+\}       \par
+\par
+var result=[]\par
+result.push(num1)\par
+result.push(num2)\par
+console.log(result)\par
+\par
+Out: [ [ 1, 'even', 3, 'even', 5 ], [ 'even', 7, 'even', 9, 'even', 11 ] ]\par
+```\par
+\par
+Ques 27\par
+\par
+Write a code to print elements in the inner arrays in reverse\par
+\par
+**Output**\par
+\par
+: 11 10 9 8 7 6 5 4 3 2 1\par
+\par
+```\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+var str_all=0;for (var i = 0; i < numsArr.length; i++) \{\par
+ var inner_array = numsArr[i];\par
+ for(var j = inner_array.length; j < 0 ;j-- )\par
+     str_all +=inner_array[j]\par
+\}\par
+console.log(str_all);\par
+```\par
+\par
+Ans:\par
+\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+// var str_all=0;\par
+\par
+var result=[]\par
+\par
+var num1= numsArr[0]\par
+var num2=numsArr[1]\par
+\par
+for (var i = 0; i < num1.length; i++) \{\par
+result.push(num1[i])\par
+\}\par
+\par
+for (var i = 0; i < num2.length; i++) \{\par
+result.push(num2[i])\par
+\}\par
+\par
+var rez=result.reverse().toString();\par
+\par
+const str = rez.replace(/,/g, ' ')\par
+\par
+console.log(str)\par
+\par
+out: `11 10 9 8 7 6 5 4 3 2 1`\par
+\par
+Ques: 28\par
+\par
+Write a code to add elements in the inner arrays based on odd or even values**Output**:3630\par
+\par
+```\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+var sum_odd=0;\par
+var sum_even=0;for (var i = 0; i < numsArr.length; i++) \{\par
+ var inner_array = numsArr[i];\par
+ for(var j = 0 ; j < inner_array.length;j++ )\{\par
+ if(numsArr[i]%2!=0)\par
+ \{\par
+ sum_odd += numsArr[i]\par
+ \}\par
+ else\par
+ \{\par
+ sum_even += numsArr[i]\par
+ \}\par
+\}\par
+\}\par
+console.log(sum_odd);\par
+console.log(sum_even);\par
+```\par
+\par
+Ans:\par
+\par
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];\par
+var sum_odd=0;\par
+var sum_even=0;\par
+for (var i = 0; i < numsArr.length; i++) \{\par
+var inner_array = numsArr[i];\par
+for(var j = 0 ; j < inner_array.length;j++ )\{\par
+if(inner_array[j]%2!=0)\par
+\{\par
+sum_odd += inner_array[j]\par
+\}\par
+else\par
+\{\par
+sum_even += inner_array[j]\par
+\}\par
+\}\par
+\}\par
+console.log(sum_odd);\par
+console.log(sum_even);\par
+\par
+Output: \par
+\par
+```\par
+36\par
+30\par
+```\par
+\par
+Ques: 29\par
+\par
+**Fix the code to get the largest of three.**\par
+\par
+Code:\par
+\par
+```\par
+aa = (f,s,t) => \{\par
+ let f,s,t;\par
+ console.log(f,s,t);\par
+ if(f>s &&f>t)\{\par
+ console.log(f)\}\par
+ else if(s>f && s>t)\{\par
+ console.log(s)\}\par
+ else\{\par
+ console.log(t)\}\par
+\}aa(1,2,3);\par
+```\par
+\par
+Answer:\par
+\par
+aa = (f,s,t) => \{\par
+// let f,s,t;\par
+// console.log(f,s,t);\par
+if(f>s &&f>t)\{\par
+console.log(f)\}\par
+else if(s>f && s>t)\{\par
+console.log(s)\}\par
+else\{\par
+console.log(t)\}\par
+\}\par
+aa(1,2,3);\par
+\par
+Out: 3\par
+\par
+Ques: 30\par
+\par
+**Fix the code to Sum of the digits present in the number**\par
+\par
+Code:\par
+\par
+```\par
+let n = 123;console.log(add(n));function add(n)\par
+\{\par
+let sum = 10;\par
+for(var i=0;i<n.length;i++)\{\par
+ sum+=n[i]\par
+ \}\par
+ return sum;\par
+\}\par
+```\par
+\par
+Ans: \par
+\par
+function add(n)\par
+\{\par
+let sum = 0;\par
+console.log(n.length)\par
+for(var i=0;i<n.length;i++)\{\par
+sum+=parseInt(n[i])\par
+\}\par
+return sum;\par
+\}\par
+console.log(add('123'))\par
+\par
+output: 6\par
+\par
+Ques: 31\par
+\par
+**Fix the code to Sum of all numbers using IIFE function**\par
+\par
+Code:\par
+\par
+```\par
+const arr = [9,8,5,6,4,3,2,1];(function() \{\par
+ let sum = 0;\par
+ for (var i = 0; i <= arr.length; i++);\{\par
+ sum += arr[i];\par
+ \}\par
+ console.log(sum);\par
+ return sum;\par
+\})();\par
+```\par
+\par
+Ans:\par
+\par
+const arr = [9,8,5,6,4,3,2,1];\par
+(function() \{\par
+let sum = 0;\par
+// console.log(sum);\par
+for (var i = 0; i < arr.length; i++)\{\par
+// console.log(i);\par
+sum += arr[i];\par
+\par
+\}\par
+// console.log(sum);\par
+return sum;\par
+\})();\par
+\par
+Output:\par
+\par
+38\par
+\par
+Ques 32\par
+\par
+**Fix the code to gen Title caps.**\par
+\par
+```\par
+var arr = [\ldblquote guvi\rdblquote , \ldblquote geek\rdblquote , \ldblquote zen\rdblquote , \ldblquote fullstack\rdblquote ];var ano = function(arro) \{\par
+ for (var i = 0; i <= arro.length; i++) \{\par
+ console.log(arro[i][0].toUpperCase() + arro[i].substr(1));\par
+ \}\par
+\}\par
+ano();\par
+```\par
+\par
+Ans: \par
+\par
+var arr = ["guvi", "geek", "zen", "fullstack"];\par
+var ano = function() \{\par
+for (var i = 0; i < arr.length; i++) \{\par
+console.log(arr[i][0].toUpperCase() + arr[i].substr(1));\par
+\}\par
+\}\par
+ano();\par
+\par
+Output:\par
+\par
+`Guvi\par
+Geek\par
+Zen\par
+Fullstack`\par
+\par
+Ques 33\par
+\par
+**Fix the code to return the Prime numbers**\par
+\par
+Code:\par
+\par
+```\par
+const newArray=[1,3,2,5,10];\par
+const myPrime=newArray.filter(num=>\{\par
+ for(let i=2;i<=num;i++)\{\par
+ if(num%i===0)\par
+ \{\par
+ return true;\par
+ \}\par
+ \}\par
+ return num===1;\par
+\});\par
+console.log(myPrime);\par
+```\par
+\par
+Ans:\par
+\par
+const newArray=[1,3,2,5,10];\par
+const myPrime=newArray.filter(num=>\{\par
+for(let i=2;i<=num;i++)\{\par
+if(num===2)\par
+\{\par
+return true;\par
+\}else if(num===0&&num===1)\{\par
+return false\par
+\}else if(num%i===0)\{\par
+return false\par
+\par
+\}return num\par
+\}\par
+\});\par
+console.log(myPrime);\par
+\par
+out: `[ 3, 2, 5 ]`\par
+\par
+Ques: 34\par
+\par
+**Fix the code to sum the number in that array**\par
+\par
+Code:\par
+\par
+```\par
+const num = [10, 20, 30, 40,50,60,70,80,90,100]\par
+const sum = (a, b) =>\par
+ a + b\par
+const sum = num.reduce(sum)\par
+console.log(sum);\par
+```\par
+\par
+Answer:\par
+\par
+// Fix the code to sum the number in that array\par
+\par
+// Code:\par
+\par
+const num = [10, 20, 30, 40,50,60,70,80,90,100]\par
+const sum = (a, b) =>\par
+a + b\par
+rum = num.reduce(sum)\par
+console.log(rum);\par
+\par
+out: 550\par
+\par
+Ques: 34 **Fix the code to rotate an array by k times and return rotated array using IIFE function**\par
+\par
+```\par
+var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];\par
+var k = 3;\par
+k = arr.length % k;\par
+(function() \{\par
+ arr = \{\};\par
+ out = arr.slice(k + 1, arr.length);\par
+ var count = out.length;\par
+ for (var i = 0; i < k + 1; i++) \{\par
+ out[count] = arr[i];\par
+ count += 1;\par
+ \}\par
+ console.log(out);\})();\par
+```\par
+\par
+Ans:\par
+\par
+var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];\par
+var k = 3;\par
+// k = arr.length % k;\par
+(function() \{\par
+for(i=0; i<k; i++)\{\par
+let temp=arr[0]\par
+for(j=0; j<arr.length; j++)\{\par
+arr[j]=arr[j+1]\par
+\par
+\}        arr[arr.length-1]=temp;\par
+\par
+```\par
+// console.log(arr);\par
+\par
+```\par
+\par
+\}  console.log(arr);\par
+\par
+return arr\par
+\par
+// console.log(arr);\par
+\par
+\})();\par
+\par
+Output: \par
+\par
+```\par
+[ 6,  8,  6, 1, 9,10, 12, 13, 1, 2, 3]\par
+```\par
+\par
+Que-35\par
+\par
+**Fix the code to gen Title caps.**\par
+\par
+Code:\par
+\par
+```\par
+var arr = [\ldblquote guvi\rdblquote , \ldblquote geek\rdblquote , \ldblquote zen\rdblquote , \ldblquote fullstack\rdblquote ];(function() \{\par
+ for (var i = 0; i <= arr.length; i++) \{\par
+ console.log(arr[0][i].toUpperCase() + arr[i].substr(1));\par
+ \}\par
+\})();\par
+```\par
+\par
+Ans:\par
+\par
+var arr = ["guvi", "geek", "zen", "fullstack"];\par
+(function() \{\par
+for (var i = 0; i < arr.length; i++) \{\par
+\par
+return( (arr[i][0].toUpperCase() + arr[i].substr(1)))\par
+\par
+\}\par
+\}\par
+)();\par
+\par
+Out: \par
+\par
+```\par
+Guvi\par
+Geek\par
+Zen\par
+Fullstack\par
+```\par
+\par
+Que-36\par
+\par
+**print all odd numbers in an array using IIFE function**\par
+\par
+Code:\par
+\par
+```\par
+var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];(function() \{\par
+ for (var i = 0; i < arr.length; i++) \{\par
+ if (arr[i] % 2 === 0) \{\par
+ console.log(arr[i]);\par
+ \}\}\par
+\})();\par
+```\par
+\par
+Ans:\par
+\par
+var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];\par
+(function() \{\par
+for (var i = 0; i < arr.length; i++) \{\par
+if (arr[i] % 2 != 0) \{\par
+console.log(arr[i]);\par
+\}\}\par
+\})();\par
+\par
+Out: \par
+\par
+```\par
+1\par
+3\par
+5\par
+7\par
+79\par
+7\par
+9\par
+```\par
+\par
+Ques: 37\par
+\par
+**Fix the code to reverse.**\par
+\par
+Code:\par
+\par
+```\par
+(function(str)\{\par
+ str1 = str.split(\ldblquote  \ldblquote ).reverse().join(\ldblquote\rdblquote );\par
+ console.log(str1);\par
+\})(\ldblquote abcd\rdblquote )\par
+```\par
+\par
+Ans: \par
+\par
+(function(str)\{\par
+str1 = str.split("").reverse().join("");\par
+console.log(str1);\par
+\})("abcd")\par
+\par
+out:\par
+\par
+`dcba`\par
+\par
+Ques: 38\par
+\par
+**Fix the code to remove duplicates.**\par
+\par
+Code:\par
+\par
+```\par
+var res = function(arr)\{\par
+ for(var i=0; i < arr.length; i++)\{\par
+ newArr = [];\par
+ if(newArr.indexOf(arr[i]) == -1) \{\par
+ newArr.push(arr[i]);\par
+ \} \}\par
+ console.log(newArr)\par
+\}res([\ldblquote guvi\rdblquote ,\rdblquote geek\rdblquote ,\rdblquote guvi\rdblquote ,\rdblquote duplicate\rdblquote ,\rdblquote geeK\rdblquote ])\par
+```\par
+\par
+Ans\rdblquote\par
+\par
+var res = function(arr)\{\par
+newArr = [];\par
+\par
+for(var i=0; i < arr.length; i++)\{\par
+\par
+if(newArr.indexOf(arr[i]) === -1) \{\par
+newArr.push(arr[i]);\par
+\par
+\}\par
+\}  return newArr\par
+\par
+\}\par
+\par
+console.log(res(["guvi","geek","guvi","duplicate","geeK"]))\par
+\par
+Output:\par
+\par
+`[ 'guvi', 'geek', 'duplicate', 'geeK' ]`\par
+\par
+Ques: 39\par
+\par
+**Fix the code to give the below output:**\par
+\par
+Expected Output:\par
+\par
+[\{firstName: \ldblquote Vasanth\rdblquote , lastName: \ldblquote Raja\rdblquote , age: 24, role: \ldblquote JSWizard\rdblquote\},\{firstName: \ldblquote Sri\rdblquote , lastName: \ldblquote Devi\rdblquote , age: 28, role: \ldblquote Coder\rdblquote\}]\par
+\par
+Code:\par
+\par
+```\par
+var array =[[[\ldblquote firstname\rdblquote ,\rdblquote vasanth\rdblquote ],[\ldblquote lastname\rdblquote ,\rdblquote Raje\rdblquote ],[\ldblquote age\rdblquote ,24],[\ldblquote role\rdblquote ,\rdblquote JSWizard\rdblquote ]],[[\ldblquote firstname\rdblquote ,\rdblquote Sri\rdblquote ],[\ldblquote lastname\rdblquote ,\rdblquote Devi\rdblquote ],[\ldblquote age\rdblquote ,28],[\ldblquote role\rdblquote , \ldblquote Coder\rdblquote ]]];\par
+var final=[]\par
+while(array.length!=0)\par
+\{\par
+ var outer_remove = array.shift();\par
+\par
+ while(outer_remove.length!=0)\par
+ \{\par
+ var inner_remove = outer_remove.shift()\par
+ var key = inner_remove[0]\par
+ var value =inner_remove[1]\par
+ new_object[key]=value\par
+ \}\par
+ final.push(new_object)\}\par
+```\par
+\par
+Answer:\par
+\par
+var array =[[["firstname","vasanth"],["lastname","Raje"],["age", 24],["role","JSWizard"]],\par
+[["firstname","Sri"],["lastname","Devi"],["age",28],["role", "Coder"]]];\par
+var final=[]\par
+var new_object=\{\}\par
+while(array.length!=0)\par
+\{\par
+// console.log(array.length)\par
+var outer_remove = array.shift();\par
+// console.log(outer_remove)\par
+while(outer_remove.length!=0)\par
+\{\par
+// console.log(outer_remove.length)\par
+\par
+var inner_remove = outer_remove.shift()\par
+// console.log(inner_remove)\par
+\par
+var key = inner_remove[0]\par
+// console.log(key)\par
+\par
+var value =inner_remove[1]\par
+// console.log(value)\par
+\par
+new_object[key]=value\par
+\}\par
+final.push(new_object)\}\par
+console.log(final)\par
+\par
+output:\par
+\par
+```\par
+[\par
+  \{ firstname: 'Sri', lastname: 'Devi', age: 28, role: 'Coder' \},\par
+  \{ firstname: 'Sri', lastname: 'Devi', age: 28, role: 'Coder' \}\par
+]\par
+```\par
+\par
+Ques: 40\par
+\par
+**Fix the code to give the below output:**\par
+\par
+Sum of odd numbers in an array\par
+\par
+Code:\par
+\par
+```\par
+\par
+var as=[12,34,5,6,2,56,6,2,1];\par
+var s=as.reduce(function(a,c)\{\par
+ if(c%2!=0)\par
+ \{\par
+ return a+c;\par
+ \}\par
+ return a;\});\par
+console.log(s);\par
+\par
+Answer:\par
+var as=[12,34,5,6,2,56,6,2,1];\par
+var s=as.reduce(function(a,c)\{\par
+ if(c%2!=0)\par
+ \{\par
+ return a-c;\par
+ \}\par
+ return a;\});\par
+console.log(s);\par
+Output: 6\par
+```\par
+\par
+Answer:\par
+\par
+// Fix the code to give the below output:\par
+\par
+// Swap the odd and even digits\par
+\par
+// Code:\par
+\par
+aa = data=>\{\par
+var a=data;\par
+var l="";\par
+\par
+for(i=0;i<a.length-1;i++)\{\par
+var s=a[i+1]\par
+// console.log(s)\par
+var b=a[i]\par
+// console.log(b)\par
+\par
+l+=s\par
+l+=b\par
+i=i+1\par
+\par
+\}\par
+if((a.length%2)!=0)\{\par
+l+=a[a.length-1]\par
+\}\par
+console.log(l);\par
+\}\par
+aa("1234");\par
+\par
+Output: 2143\f0\par
+}
+ 
